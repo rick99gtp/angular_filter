@@ -1,11 +1,11 @@
-/* .item-container {
+.item-container {
     position: relative;
+    margin: 10px;
 }
 
 img {
-    position: absolute;
-    left: 0;
-    top: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .item-info {
@@ -14,10 +14,14 @@ img {
     bottom: 0;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+    font-family: 'Dancing Script', cursive;
 }
 
 p {
     display: inline-block;
-    padding: 5px;
-    font-size: 12px;
-} */
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 10px;
+}
