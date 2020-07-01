@@ -7,11 +7,13 @@ import { InventoryService } from '../inventory.service';
   styleUrls: ['./store-item.component.css']
 })
 export class StoreItemComponent implements OnInit {
-  @Input() items: [];
+  @Input() itemobject = {};
+  @Input() item_num: string;
 
-  constructor(private inven: InventoryService) { }
+  constructor() { }
 
   ngOnInit(): void {
+    console.log(this.itemobject);
   }
 
 }

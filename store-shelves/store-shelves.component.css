@@ -1,0 +1,5 @@
+.grid-container {
+    display: grid;
+    grid-template: auto auto auto;
+    grid-template-rows: auto;
+}

@@ -7,7 +7,7 @@ import { InventoryService } from './inventory.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  items: {}[] = [];
+  items: {imageURL: string, name: string, price: number, category: string}[] = [];
 
   title = 'filter-project';
 
