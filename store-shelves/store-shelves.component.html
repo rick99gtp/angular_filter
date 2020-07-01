@@ -1,5 +1,5 @@
 <div class="grid-container">
     <div *ngFor="let item of items; let i = index">
-        <app-store-item [itemobject]="item" [item_num]="i"></app-store-item>
+        <app-store-item [itemobject]="item" *ngIf="data ==='all' || data === item.category"></app-store-item>
     </div>
 </div>

@@ -1,2 +1,2 @@
-<app-store-menu></app-store-menu>
-<app-store-shelves [items]="items"></app-store-shelves>
+<app-store-menu (cat_emitter)="parentData=$event"></app-store-menu>
+<app-store-shelves [data]="parentData" [items]="items" [cur_cat]="category_selected"></app-store-shelves>

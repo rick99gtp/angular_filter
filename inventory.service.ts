@@ -1,5 +1,10 @@
+import { Injectable } from '@angular/core';
+
+@Injectable()
 export class InventoryService {
-  items = [
+  private current_category = 'all';
+  
+  private items = [
     {
       imageURL: 'https://storcpdkenticomedia.blob.core.windows.net/media/recipemanagementsystem/media/recipe-media-files/recipes/retail/x17/16714-birthday-cake-600x600.jpg?ext=.jpg',
       name: 'Birthday Cake',
@@ -22,19 +27,19 @@ export class InventoryService {
       imageURL: 'https://cdn.sallysbakingaddiction.com/wp-content/uploads/2019/05/yellow-cupcakes-with-chocolate-frosting-sprinkles.jpg',
       name: 'Chocolate Cupcake',
       price: 5,
-      category: 'cupakes'
+      category: 'cupcakes'
     },
     {
       imageURL: 'https://natashaskitchen.com/wp-content/uploads/2020/05/Vanilla-Cupcakes-3.jpg',
       name: 'Vanilla Cupcake',
       price: 5,
-      category: 'cupakes'
+      category: 'cupcakes'
     },
     {
       imageURL: 'https://media2.s-nbcnews.com/i/newscms/2018_16/1332898/unicorn-cupcakes-today-041918-tease_607876a763a32491c1bf4bb7c8eab53e.jpg',
-      name: 'Unicorn Cupcakes',
+      name: 'Unicorn Cupcake',
       price: 30,
-      category: 'cupakes'
+      category: 'cupcakes'
     },
     {
       imageURL: 'https://www.dw.com/image/16749891_303.jpg',
@@ -73,4 +78,16 @@ export class InventoryService {
       category: 'donuts'
     }
   ];
+
+  changeCategory(cat: string) {
+    this.current_category = cat;
+  }
+
+  getCategory() {
+    return this.current_category;
+  }
+
+  getItems() {
+    return this.items;
+  }
 }

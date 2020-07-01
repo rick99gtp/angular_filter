@@ -1,11 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-store-menu',
   templateUrl: './store-menu.component.html',
   styleUrls: ['./store-menu.component.css']
 })
+
 export class StoreMenuComponent implements OnInit {
+
+  @Output() cat_emitter = new EventEmitter();
+  cat_selected: string;
 
   class: boolean[] = [
     true,
@@ -27,6 +31,9 @@ export class StoreMenuComponent implements OnInit {
   onBtnClick(e) {
     this.resetAllButtons();
     this.class[e.target.id] = !this.class[e.target.id];
+    // assign current_category in service
+    this.cat_selected = e.target.textContent;
+    this.cat_emitter.emit(this.cat_selected.toLowerCase());
   }
 
   resetAllButtons() {

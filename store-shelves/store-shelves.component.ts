@@ -7,11 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class StoreShelvesComponent implements OnInit {
   @Input() items: {imageURL: string, name: string, price: number, category: string}[] = [];
+  @Input() cur_cat: string;
+  @Input() data: string;
 
   constructor() { }
 
   ngOnInit(): void {
-    
   }
 
 }
