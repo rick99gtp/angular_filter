@@ -19,7 +19,7 @@ export class InventoryService {
     },
     {
       imageURL: 'https://www.pamperedchef.com/iceberg/com/recipe/1125065-lg.jpg',
-      name: 'Chocolate Surprise Cake',
+      name: 'Chocolate Surprise',
       price: 40,
       category: 'cakes'
     },
