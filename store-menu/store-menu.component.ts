@@ -8,6 +8,8 @@ import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 
 export class StoreMenuComponent implements OnInit {
 
+  inputText: string = "";
+
   @Output() cat_emitter = new EventEmitter();
   cat_selected: string;
 
@@ -19,7 +21,7 @@ export class StoreMenuComponent implements OnInit {
     false
   ];
 
-  default_placeholder = 'Enter search terms...';
+  default_placeholder = 'item...';
   current_placeholder = '';
 
   constructor() { }
@@ -48,6 +50,12 @@ export class StoreMenuComponent implements OnInit {
 
   onInputBlur() {
     this.current_placeholder = this.default_placeholder;
+  }
+
+  onKey() {
+    // check if enter key pressed
+    this.cat_emitter.emit(this.inputText.toLowerCase());
+    this.inputText = "";
   }
 
 }

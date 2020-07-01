@@ -6,6 +6,7 @@ import { StoreItemComponent } from './store-item/store-item.component';
 import { StoreMenuComponent } from './store-menu/store-menu.component';
 import { StoreShelvesComponent } from './store-shelves/store-shelves.component';
 import { InventoryService } from './inventory.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { InventoryService } from './inventory.service';
     StoreShelvesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [InventoryService],
   bootstrap: [AppComponent]
